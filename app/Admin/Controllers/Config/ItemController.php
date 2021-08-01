@@ -2,6 +2,7 @@
 
 namespace App\Admin\Controllers\Config;
 
+use App\Admin\Grid\Tools\SyncItem;
 use App\Admin\Repositories\Item;
 use Dcat\Admin\Form;
 use Dcat\Admin\Grid;
@@ -44,11 +45,27 @@ class ItemController extends AdminController
             $grid->column('color');
             $grid->column('subclass');
             $grid->column('is_boardcast');
-        
+
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');
-        
+
             });
+
+            // 开启字段选择器功能
+            $grid->showColumnSelector();
+            // 设置默认隐藏字段
+            $grid->hideColumns([
+                'class','quality','type','medindex','icon','desc',
+                'level','price','sale_price','rule','num','script_id','skill_id',
+                'is_cost','need_skill','need_skill_level','own_num','obj_type',
+                'type_desc','quality_level','recipe_id','color','subclass','is_boardcast'
+            ]);
+            $grid->tools(new SyncItem());
+            $grid->disableDeleteButton();
+            $grid->disableEditButton();
+            $grid->disableQuickEditButton();
+//            $grid->disableViewButton();
+            $grid->disableCreateButton(true);
         });
     }
 
@@ -88,6 +105,8 @@ class ItemController extends AdminController
             $show->field('color');
             $show->field('subclass');
             $show->field('is_boardcast');
+            $show->disableDeleteButton();
+            $show->disableEditButton();
         });
     }
 

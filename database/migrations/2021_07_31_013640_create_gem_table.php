@@ -19,9 +19,9 @@ class CreateGemTable extends Migration
             $table->integer('quality')->default('0')->comment('品质');
             $table->integer('type')->default('0')->comment('类别');
             $table->integer('index')->default('0')->comment('宝石索引');
-            $table->string('icon')->default('''')->comment('图标');
+            $table->string('icon')->default('')->comment('图标');
             $table->integer('rule')->default('0')->comment('适应规则');
-            $table->string('name')->default('''')->comment('名称');
+            $table->string('name')->default('')->comment('名称');
             $table->text('desc')->comment('说明');
             $table->integer('price')->default('0')->comment('基本价格');
             $table->integer('sale_price')->default('0')->comment('出售价格');
@@ -89,8 +89,8 @@ class CreateGemTable extends Migration
             $table->integer('basic_mag_def')->default('0')->comment('基础内攻防御');
             $table->integer('basic_hit')->default('0')->comment('基础命中');
             $table->integer('basic_miss')->default('0')->comment('基础闪避');
-            $table->string('color')->default('''')->comment('颜色值(R,G,B,A)');
-            $table->string('desc_type')->default('''')->comment('类型描述');
+            $table->string('color')->default('')->comment('颜色值(R,G,B,A)');
+            $table->string('desc_type')->default('')->comment('类型描述');
             $table->integer('special_id')->default('0')->comment('特效索引');
             $table->integer('color_code')->default('0')->comment('颜色');
             $table->integer('is_boradcast')->default('0')->comment('是否广播');

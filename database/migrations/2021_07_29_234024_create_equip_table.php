@@ -24,9 +24,9 @@ class CreateEquipTable extends Migration
             $table->integer('rule')->default('0')->comment('适应规则');
             $table->integer('suit_id')->default('0')->comment('套装编号');
             $table->integer('suit_value')->default('0')->comment('套装效果值');
-            $table->string('name')->default('''')->comment('名称');
+            $table->string('name')->default('')->comment('名称');
             $table->integer('lv')->default('0')->comment('等级');
-            $table->string('menpai')->default('''')->comment('门派需求');
+            $table->string('menpai')->default('')->comment('门派需求');
             $table->text('desc')->comment('说明');
             $table->integer('price')->default('0')->comment('基本价格');
             $table->integer('sale_price')->default('0')->comment('出售价格');
@@ -35,8 +35,8 @@ class CreateEquipTable extends Migration
             $table->integer('max_gem')->default('0')->comment('镶嵌宝石上限');
             $table->integer('skill_id')->default('0')->comment('技能ID');
             $table->integer('script_id')->default('0')->comment('脚本ID');
-            $table->string('icon')->default('''')->comment('图标');
-            $table->string('desc_type')->default('''')->comment('类型描述');
+            $table->string('icon')->default('')->comment('图标');
+            $table->string('desc_type')->default('')->comment('类型描述');
             $table->integer('piao_id')->default('0')->comment('飘带ID');
             $table->integer('is_zz')->default('0')->comment('是否有资质');
             $table->integer('is_pz')->default('0')->comment('是否受品质影响');

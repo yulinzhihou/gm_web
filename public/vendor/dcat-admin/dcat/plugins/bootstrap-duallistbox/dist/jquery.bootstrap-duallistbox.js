@@ -364,7 +364,7 @@
 
   BootstrapDualListbox.prototype = {
     init: function () {
-      // Add the custom HTML template
+      // Add the custom HTML config_file
       this.container = $('' +
         '<div class="bootstrap-duallistbox-container">' +
         ' <div class="box1">' +

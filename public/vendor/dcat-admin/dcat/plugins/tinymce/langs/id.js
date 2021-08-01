@@ -238,7 +238,7 @@ tinymce.addI18n('id',{
 "Body": "Body",
 "Footer": "Footer",
 "Border color": "Warna batas",
-"Insert template...": "Masukkan template...",
+"Insert template...": "Masukkan config_file...",
 "Templates": "Templat",
 "Template": "Templat",
 "Text color": "Warna teks",

@@ -1,8 +1,9 @@
 <?php
 return [
     'labels' => [
-        'Equip' => '装备',
-        'equip' => '装备',
+        'Equip' => '装备数据',
+        'equip' => '装备数据',
+        'config' => '配置文件'
     ],
     'fields' => [
         'class' => '基本类型',

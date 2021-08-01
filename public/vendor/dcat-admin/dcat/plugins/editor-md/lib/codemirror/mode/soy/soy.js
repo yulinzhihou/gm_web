@@ -92,7 +92,7 @@
 
           case "tag":
             if (stream.match(/^\/?}/)) {
-              if (state.tag == "/template" || state.tag == "/deltemplate") state.indent = 0;
+              if (state.tag == "/config_file" || state.tag == "/deltemplate") state.indent = 0;
               else state.indent -= (stream.current() == "/}" || indentingTags.indexOf(state.tag) == -1 ? 2 : 1) * config.indentUnit;
               state.soyState.pop();
               return "keyword";

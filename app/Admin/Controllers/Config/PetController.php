@@ -2,6 +2,7 @@
 
 namespace App\Admin\Controllers\Config;
 
+use App\Admin\Grid\Tools\SyncPet;
 use App\Admin\Repositories\Pet;
 use Dcat\Admin\Form;
 use Dcat\Admin\Grid;
@@ -18,10 +19,10 @@ class PetController extends AdminController
     protected function grid()
     {
         return Grid::make(new Pet(), function (Grid $grid) {
-            $grid->column('id')->sortable();
-            $grid->column('name');
+            $grid->column('id')->filter(Grid\Column\Filter\Like::make())->sortable();
+            $grid->column('name')->filter(Grid\Column\Filter\Like::make());
             $grid->column('class');
-            $grid->column('catch_level');
+            $grid->column('catch_level')->filter(Grid\Column\Filter\Equal::make());
             $grid->column('group');
             $grid->column('is_varition');
             $grid->column('is_baby');
@@ -71,11 +72,30 @@ class PetController extends AdminController
             $grid->column('same_type');
             $grid->column('extra_one');
             $grid->column('extra_two');
-        
+
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');
-        
             });
+
+            // 开启字段选择器功能
+            $grid->showColumnSelector();
+            // 设置默认隐藏字段
+            $grid->hideColumns([
+                'class','group','is_varition','is_baby','food_type','skill_study',
+                'positive_skill_one','positive_skill_one_percent','positive_skill_two','positive_skill_two_percent',
+                'negative_skill_one','negative_skill_one_percent','negative_skill_two','negative_skill_two_percent',
+                'negative_skill_three','negative_skill_three_percent','negative_skill_four','negative_skill_four_percent',
+                'negative_skill_five','negative_skill_five_percent','negative_skill_six','negative_skill_six_percent','negative_skill_seven',
+                'negative_skill_seven_percent','negative_skill_eight','negative_skill_eight_percent','negative_skill_nine',
+                'negative_skill_nine_percent','negative_skill_ten','negative_skill_ten_percent','basic_hp','basic_str','basic_con',
+                'basic_spr','basic_dex','basic_com','grow_rate_one','grow_rate_two','grow_rate_three','grow_rate_four','grow_rate_five',
+                'timid','cautious','loyal','shrewd','bravery','breeding_time','same_type','extra_one','extra_two'
+            ]);
+            $grid->tools(new SyncPet());
+            $grid->disableDeleteButton();
+            $grid->disableEditButton();
+            $grid->disableQuickEditButton();
+            $grid->disableCreateButton(true);
         });
     }
 
@@ -142,6 +162,8 @@ class PetController extends AdminController
             $show->field('same_type');
             $show->field('extra_one');
             $show->field('extra_two');
+            $show->disableDeleteButton();
+            $show->disableEditButton();
         });
     }
 
@@ -206,6 +228,9 @@ class PetController extends AdminController
             $form->text('same_type');
             $form->text('extra_one');
             $form->text('extra_two');
+
+            $form->disableDeleteButton();
+            $form->disableEditingCheck();
         });
     }
 }

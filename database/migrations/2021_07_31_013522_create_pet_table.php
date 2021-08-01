@@ -15,14 +15,14 @@ class CreatePetTable extends Migration
     {
         Schema::create('pet', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name')->default('''')->comment('名称');
+            $table->string('name')->default('')->comment('名称');
             $table->integer('class')->default('0')->comment('类型');
             $table->integer('catch_level')->default('0')->comment('可携带等级');
             $table->integer('group')->default('0')->comment('阵营');
             $table->integer('is_varition')->default('0')->comment('是否变异');
-            $table->string('is_baby')->default('''')->comment('是否宝宝');
+            $table->string('is_baby')->default('')->comment('是否宝宝');
             $table->integer('food_type')->default('0')->comment('食物类');
-            $table->string('skill_study')->default('''')->comment('所能学的技能数');
+            $table->string('skill_study')->default('')->comment('所能学的技能数');
             $table->integer('positive_skill_one')->default('0')->comment('主动技能1');
             $table->integer('positive_skill_one_percent')->default('0')->comment('主动技能1生成几率（1/100w）');
             $table->integer('positive_skill_two')->default('0')->comment('主动技能2');

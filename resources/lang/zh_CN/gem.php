@@ -1,8 +1,9 @@
 <?php
 return [
     'labels' => [
-        'Gem' => '宝石',
-        'gem' => '宝石',
+        'Gem' => '宝石数据',
+        'gem' => '宝石数据',
+        'config' => '配置文件'
     ],
     'fields' => [
         'class' => '基本类型',

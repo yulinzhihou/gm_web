@@ -2,6 +2,7 @@
 
 namespace App\Admin\Controllers\Config;
 
+use App\Admin\Grid\Tools\SyncGem;
 use App\Admin\Repositories\Gem;
 use Dcat\Admin\Form;
 use Dcat\Admin\Grid;
@@ -18,14 +19,14 @@ class GemController extends AdminController
     protected function grid()
     {
         return Grid::make(new Gem(), function (Grid $grid) {
-            $grid->column('id')->sortable();
+            $grid->column('id')->filter(Grid\Column\Filter\Like::make())->sortable();
             $grid->column('class');
             $grid->column('quality');
             $grid->column('type');
             $grid->column('index');
             $grid->column('icon');
             $grid->column('rule');
-            $grid->column('name');
+            $grid->column('name')->filter(Grid\Column\Filter\Like::make());
             $grid->column('desc');
             $grid->column('price');
             $grid->column('sale_price');
@@ -98,11 +99,32 @@ class GemController extends AdminController
             $grid->column('special_id');
             $grid->column('color_code');
             $grid->column('is_boradcast');
-        
+
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');
-        
+
             });
+
+            // 开启字段选择器功能
+            $grid->showColumnSelector();
+            // 设置默认隐藏字段
+            $grid->hideColumns([
+                'class','quality','type','index','icon','rule','desc','price','sale_price','hp_max_value','hp_max_percent',
+                'hp_back_value','mp_max_value','mp_max_percent','mp_back_value','cold_att','cold_def','cold_keep_time','fire_att','fire_def',
+                'fire_keep_time','light_att','light_def','light_keep_time','postion_att','postion_def','postion_keep_time','def_all_percent',
+                'phy_attack','phy_attack_percent','add_phy_attack_percent','phy_def','phy_def_percent','add_phy_def_percent','miss_phy_def_percent',
+                'mag_attack','mag_attack_percent','add_mag_attack_percent','mag_def','mag_def_percent','add_mag_def_percent','miss_mag_def_percent',
+                'attach_speed','mag_cold_time','hit','miss','critical_att','ignore_percent','move_percent','attack_back','attach_cost','str','spr',
+                'con','com','dex','critical_def','qian_neng','hp_sto','mp_sto','add_skill_lv','add_all_skill_lv','spe_skill_rate','Resist_cold_def',
+                'Resist_fire_def','Resist_light_def','Resist_postion_def','basic_phy_attack','basic_mag_attack','basic_phy_def','basic_mag_def',
+                'basic_hit','basic_miss','color','desc_type','special_id','color_code','is_boradcast'
+            ]);
+            $grid->tools(new SyncGem());
+            $grid->disableDeleteButton();
+            $grid->disableEditButton();
+            $grid->disableQuickEditButton();
+//            $grid->disableViewButton();
+            $grid->disableCreateButton(true);
         });
     }
 
@@ -196,6 +218,8 @@ class GemController extends AdminController
             $show->field('special_id');
             $show->field('color_code');
             $show->field('is_boradcast');
+            $show->disableDeleteButton();
+            $show->disableEditButton();
         });
     }
 

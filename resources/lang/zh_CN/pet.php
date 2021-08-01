@@ -1,8 +1,9 @@
 <?php
 return [
     'labels' => [
-        'Pet' => '珍兽',
-        'pet' => '珍兽',
+        'Pet' => '珍兽数据',
+        'pet' => '珍兽数据',
+        'config' => '配置文件'
     ],
     'fields' => [
         'name' => '名称',

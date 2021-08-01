@@ -8,5 +8,6 @@ class Char extends Model
 {
     protected $connection = 'tlbbdb';
     protected $table = 'char';
-
+    public $timestamps = false;
+    protected $primaryKey = 'aid';
 }

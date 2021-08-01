@@ -1,8 +1,9 @@
 <?php
 return [
     'labels' => [
-        'Item' => '物品',
-        'item' => '物品',
+        'Item' => '物品数据',
+        'item' => '物品数据',
+        'config' => '配置文件'
     ],
     'fields' => [
         'class' => '类别',

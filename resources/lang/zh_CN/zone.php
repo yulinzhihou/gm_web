@@ -1,8 +1,8 @@
 <?php
 return [
     'labels' => [
-        'Zone' => '分区',
-        'zone' => '分区',
+        'Zone' => '分区配置',
+        'zone' => '分区配置',
     ],
     'fields' => [
         'type' => '数据库类型',
