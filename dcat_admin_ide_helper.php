@@ -181,6 +181,18 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection subclass
      * @property Grid\Column|Collection is_boardcast
      * @property Grid\Column|Collection value
+     * @property Grid\Column|Collection param_num
+     * @property Grid\Column|Collection accname
+     * @property Grid\Column|Collection charname
+     * @property Grid\Column|Collection event
+     * @property Grid\Column|Collection event_note
+     * @property Grid\Column|Collection request_time
+     * @property Grid\Column|Collection param1
+     * @property Grid\Column|Collection param2
+     * @property Grid\Column|Collection param3
+     * @property Grid\Column|Collection param4
+     * @property Grid\Column|Collection param5
+     * @property Grid\Column|Collection param6
      * @property Grid\Column|Collection version
      * @property Grid\Column|Collection detail
      * @property Grid\Column|Collection email
@@ -242,7 +254,6 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection imdata
      * @property Grid\Column|Collection xinfaid
      * @property Grid\Column|Collection xinfalvl
-     * @property Grid\Column|Collection charname
      * @property Grid\Column|Collection charlevel
      * @property Grid\Column|Collection charsex
      * @property Grid\Column|Collection charmenpai
@@ -588,7 +599,6 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection ipregion
      * @property Grid\Column|Collection petnumextra
      * @property Grid\Column|Collection moneyjz
-     * @property Grid\Column|Collection accname
      * @property Grid\Column|Collection pw
      * @property Grid\Column|Collection sex
      * @property Grid\Column|Collection enegry
@@ -829,6 +839,18 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection subclass(string $label = null)
      * @method Grid\Column|Collection is_boardcast(string $label = null)
      * @method Grid\Column|Collection value(string $label = null)
+     * @method Grid\Column|Collection param_num(string $label = null)
+     * @method Grid\Column|Collection accname(string $label = null)
+     * @method Grid\Column|Collection charname(string $label = null)
+     * @method Grid\Column|Collection event(string $label = null)
+     * @method Grid\Column|Collection event_note(string $label = null)
+     * @method Grid\Column|Collection request_time(string $label = null)
+     * @method Grid\Column|Collection param1(string $label = null)
+     * @method Grid\Column|Collection param2(string $label = null)
+     * @method Grid\Column|Collection param3(string $label = null)
+     * @method Grid\Column|Collection param4(string $label = null)
+     * @method Grid\Column|Collection param5(string $label = null)
+     * @method Grid\Column|Collection param6(string $label = null)
      * @method Grid\Column|Collection version(string $label = null)
      * @method Grid\Column|Collection detail(string $label = null)
      * @method Grid\Column|Collection email(string $label = null)
@@ -890,7 +912,6 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection imdata(string $label = null)
      * @method Grid\Column|Collection xinfaid(string $label = null)
      * @method Grid\Column|Collection xinfalvl(string $label = null)
-     * @method Grid\Column|Collection charname(string $label = null)
      * @method Grid\Column|Collection charlevel(string $label = null)
      * @method Grid\Column|Collection charsex(string $label = null)
      * @method Grid\Column|Collection charmenpai(string $label = null)
@@ -1236,7 +1257,6 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection ipregion(string $label = null)
      * @method Grid\Column|Collection petnumextra(string $label = null)
      * @method Grid\Column|Collection moneyjz(string $label = null)
-     * @method Grid\Column|Collection accname(string $label = null)
      * @method Grid\Column|Collection pw(string $label = null)
      * @method Grid\Column|Collection sex(string $label = null)
      * @method Grid\Column|Collection enegry(string $label = null)
@@ -1482,6 +1502,18 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection subclass
      * @property Show\Field|Collection is_boardcast
      * @property Show\Field|Collection value
+     * @property Show\Field|Collection param_num
+     * @property Show\Field|Collection accname
+     * @property Show\Field|Collection charname
+     * @property Show\Field|Collection event
+     * @property Show\Field|Collection event_note
+     * @property Show\Field|Collection request_time
+     * @property Show\Field|Collection param1
+     * @property Show\Field|Collection param2
+     * @property Show\Field|Collection param3
+     * @property Show\Field|Collection param4
+     * @property Show\Field|Collection param5
+     * @property Show\Field|Collection param6
      * @property Show\Field|Collection version
      * @property Show\Field|Collection detail
      * @property Show\Field|Collection email
@@ -1543,7 +1575,6 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection imdata
      * @property Show\Field|Collection xinfaid
      * @property Show\Field|Collection xinfalvl
-     * @property Show\Field|Collection charname
      * @property Show\Field|Collection charlevel
      * @property Show\Field|Collection charsex
      * @property Show\Field|Collection charmenpai
@@ -1889,7 +1920,6 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection ipregion
      * @property Show\Field|Collection petnumextra
      * @property Show\Field|Collection moneyjz
-     * @property Show\Field|Collection accname
      * @property Show\Field|Collection pw
      * @property Show\Field|Collection sex
      * @property Show\Field|Collection enegry
@@ -2130,6 +2160,18 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection subclass(string $label = null)
      * @method Show\Field|Collection is_boardcast(string $label = null)
      * @method Show\Field|Collection value(string $label = null)
+     * @method Show\Field|Collection param_num(string $label = null)
+     * @method Show\Field|Collection accname(string $label = null)
+     * @method Show\Field|Collection charname(string $label = null)
+     * @method Show\Field|Collection event(string $label = null)
+     * @method Show\Field|Collection event_note(string $label = null)
+     * @method Show\Field|Collection request_time(string $label = null)
+     * @method Show\Field|Collection param1(string $label = null)
+     * @method Show\Field|Collection param2(string $label = null)
+     * @method Show\Field|Collection param3(string $label = null)
+     * @method Show\Field|Collection param4(string $label = null)
+     * @method Show\Field|Collection param5(string $label = null)
+     * @method Show\Field|Collection param6(string $label = null)
      * @method Show\Field|Collection version(string $label = null)
      * @method Show\Field|Collection detail(string $label = null)
      * @method Show\Field|Collection email(string $label = null)
@@ -2191,7 +2233,6 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection imdata(string $label = null)
      * @method Show\Field|Collection xinfaid(string $label = null)
      * @method Show\Field|Collection xinfalvl(string $label = null)
-     * @method Show\Field|Collection charname(string $label = null)
      * @method Show\Field|Collection charlevel(string $label = null)
      * @method Show\Field|Collection charsex(string $label = null)
      * @method Show\Field|Collection charmenpai(string $label = null)
@@ -2537,7 +2578,6 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection ipregion(string $label = null)
      * @method Show\Field|Collection petnumextra(string $label = null)
      * @method Show\Field|Collection moneyjz(string $label = null)
-     * @method Show\Field|Collection accname(string $label = null)
      * @method Show\Field|Collection pw(string $label = null)
      * @method Show\Field|Collection sex(string $label = null)
      * @method Show\Field|Collection enegry(string $label = null)

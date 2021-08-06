@@ -19,7 +19,7 @@ class ItemController extends AdminController
     protected function grid()
     {
         return Grid::make(new Item(), function (Grid $grid) {
-            $grid->column('id')->sortable();
+            $grid->column('id')->filter(Grid\Column\Filter\Like::make())->sortable();
             $grid->column('class');
             $grid->column('quality');
             $grid->column('type');

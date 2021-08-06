@@ -71,6 +71,22 @@ Route::group([
 ], function (Router $router) {
     $router->resource('pet','Config\PetController');
 });
+/*在线GM工具-事件类型*/
+Route::group([
+    'prefix' => config('admin.route.prefix').'/online',
+    'middleware' => config('admin.route.middleware'),
+    'namespace' => config('admin.route.namespace')
+], function (Router $router) {
+    $router->resource('event_type','Online\EventTypeController');
+});
+/*在线GM工具-在线发货*/
+Route::group([
+    'prefix' => config('admin.route.prefix').'/online',
+    'namespace' => config('admin.route.namespace'),
+    'middleware' => config('admin.route.middleware')
+], function (Router $router) {
+    $router->resource('event','Online\EventlistController');
+});
 
 
 

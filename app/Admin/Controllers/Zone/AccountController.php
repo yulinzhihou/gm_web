@@ -30,6 +30,13 @@ class AccountController extends AdminController
 //            $grid->column('id_type');
 //            $grid->column('id_card');
             $grid->column('point');
+            $grid->column('is_online')->display(function ($isOnline){
+                if ($isOnline == 0) {
+                    return '<span class="label bg-red">离线</span>';
+                } else {
+                    return '<span class="label bg-red">在线</span>';
+                }
+            });
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->like('name');
 

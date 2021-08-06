@@ -17,6 +17,7 @@ return [
         'address' => '地址',
         'id_type' => '证件类型',
         'id_card' => '证件号码',
+        'is_online' => '是否在线',
         'point' => '充值点',
     ],
     'options' => [
