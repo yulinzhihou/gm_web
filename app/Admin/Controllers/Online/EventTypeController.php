@@ -45,8 +45,8 @@ class EventTypeController extends AdminController
             $show->field('name');
             $show->field('desc');
             $show->field('param_num');
-            $show->field('created_at');
-            $show->field('updated_at');
+//            $show->field('created_at');
+//            $show->field('updated_at');
         });
     }
 
@@ -63,8 +63,8 @@ class EventTypeController extends AdminController
             $form->text('desc');
             $form->text('param_num');
 
-            $form->display('created_at');
-            $form->display('updated_at');
+//            $form->display('created_at');
+//            $form->display('updated_at');
         });
     }
 }

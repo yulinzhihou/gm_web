@@ -385,10 +385,10 @@ var ColorItem = function () {
      *
      * @param {String} fn QixColor function name
      * @param args QixColor function arguments
-     * @example let darkerColor = color.api('darken', 0.25);
-     * @example let luminosity = color.api('luminosity');
-     * @example color = color.api('negate');
-     * @example let qColor = color.api().negate();
+     * @example let darkerColor = color.Api('darken', 0.25);
+     * @example let luminosity = color.Api('luminosity');
+     * @example color = color.Api('negate');
+     * @example let qColor = color.Api().negate();
      * @returns {ColorItem|QixColor|*}
      */
     value: function api(fn) {
