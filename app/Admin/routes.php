@@ -87,14 +87,5 @@ Route::group([
 ], function (Router $router) {
     $router->resource('event','Online\EventlistController');
 });
-/*后台接口数据*/
-//Route::group([
-//    'prefix' => config('admin.route.prefix').'/Api',
-//    'namespace' => config('admin.route.namespace'),
-//    'middleware' => config('admin.route.middleware')
-//],function (Router $router) {
-//    $router->post('chars','Api\ApiController');
-//});
-//
 
 
